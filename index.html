@@ -11,12 +11,44 @@
 </head>
 
 <body class="container">
-    <form method="post" action="">
+    <form method="POST" action="https://request-data.onrender.com/register">
 
         <fieldset>
 
             <label for="nombre">Nombre: </label>
-            <input type="text" required maxlength="50" placeholder="Óscar" name="nombre" id="nombre" required>
+            <input type="text" maxlength="50" placeholder="Óscar" name="nombre" id="nombre" required>
+        </fieldset>
+
+        <fieldset>
+            <label for="edad">Edad: </label>
+            <input type="number" min="18" max="99" placeholder="25" name="edad" id="edad" required>
+        </fieldset>
+
+        <fieldset>
+            <label for="dni">DNI: </label>
+            <input type= "text" pattern="^[a-zA-Z0-9][0-9]{7}[a-zA-Z]$" placeholder="12345678A" name="dni" id="dni" required >
+        </fieldset>
+
+        <fieldset>
+            <label for="ciudad"></label>
+            <input id="ciudad" name="ciudad" placeholder="Barcelona" maxlength="100" required>
+        </fieldset>
+
+        <fieldset>
+            <label for="transportation">Método de transporte</label>
+            <select id="transportation" name="transportation" required>
+                <option value="pie">A pie</option>
+                <option value="publico">En transporte público</option>
+                <option value="privado">En transporte privado</option>
+        </fieldset>
+
+        <fieldset>
+            <label for="objetivos">Objetivos del curso</label>
+            <textarea id="objetivos" name="objetivos" rows="4" cols="30" maxlength="1024"></textarea>
+        </fieldset>
+        <fieldset>
+            <label for="objetivos">Objetivos del curso</label>
+            <textarea id="objetivos" name="objetivos" rows="4" cols="30" maxlength="1024"></textarea>
         </fieldset>
 
         <input type="submit" class="submit" id="submit" value="Enviar" />
